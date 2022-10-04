@@ -1,0 +1,117 @@
+.bg-opacity {
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;    
+    z-index: 1000;
+
+    .cookie {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px;
+        background: #fff;
+        bottom: 0;
+        z-index: 1000;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        max-height: min-content;
+        height: min-content;
+        align-items:center ;
+        justify-content: space-between;
+
+        .cookie_content {
+            text-align: left;
+            flex-direction:column;
+            align-items:center;
+        }
+        
+        .cookie_content .banner__image img{
+            width:60%;
+            display:block;
+            margin:15px auto;
+        }
+        
+        .cookie_content h5 {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: $green_brand;
+            text-align: center;
+        }
+        
+        .cookie_content .slot {
+            margin: 15px 0;
+            font-size: 15px;
+
+            a {
+                color: $green_brand;
+            }
+        }
+        
+        .button_cookie {
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .cookie__button {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .slot{
+            height: 250px;
+            overflow-y: auto;
+        }
+
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .cookie {
+        padding: 10px !important;
+    }
+
+    .button_cookie {
+        flex-direction: column-reverse;
+        margin-top: 5px !important;
+
+        & :first-child {
+            margin-top: 10px;
+        }
+    }
+
+    .banner__image {
+        img {
+            width: 40% !important;
+        }
+    }
+
+    .slot{
+        height: 200px !important;
+        overflow-y: auto;
+    }
+
+}
+
+@media screen and (max-height: 650px) {
+
+    .banner__image {
+        img {
+            width: 35% !important;
+        }
+    }
+
+    .slot{
+        height: 180px !important;
+        overflow-y: auto;
+    }
+
+}
